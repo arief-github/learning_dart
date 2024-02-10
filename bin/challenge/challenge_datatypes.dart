@@ -21,21 +21,18 @@ void main() {
   print(averageAge);
 
   // Teachers Grading
-  num attendance = 20.0;
-  num homework = 30.0;
-  num exam = 50.0;
-
-  final gradeAttendance = attendance as double;
-  final gradeHomework = homework as double;
-  final gradeExam = exam as double;
+  const gradeAttendance = 20.0;
+  const gradeHomework = 30.0;
+  const gradeExam = 50.0;
 
   const student1AttendancePoint = 90;
   const student1HomeworkPoint = 80;
   const student1ExamPoint = 94;
 
-  const calculateAttendancePoint = (student1AttendancePoint * 20) / 100;
-  const calculateHomeworkPoint = (student1HomeworkPoint * 30) / 100;
-  const calculateExamPoint = (student1ExamPoint * 50) / 100;
+  const calculateAttendancePoint =
+      (student1AttendancePoint * gradeAttendance) / 100;
+  const calculateHomeworkPoint = (student1HomeworkPoint * gradeHomework) / 100;
+  const calculateExamPoint = (student1ExamPoint * gradeExam) / 100;
 
   const finalGrade = (calculateAttendancePoint) +
       (calculateHomeworkPoint) +

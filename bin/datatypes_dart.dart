@@ -35,9 +35,26 @@ void main() {
 
   print(actuallyDouble);
 
-  // downcasting type
-  const someInt = 3.88;
-  final someNumber = someInt as int;
+  // below code will produce error : type 'double' is not a subtype of type 'int' in type cast
+  // const secondInt = 4;
+  // final toNum = secondInt as double;
 
-  print(someNumber.isOdd);
+  /**
+   * Casting
+   * 
+   * 
+   * num is too general. num could potentially be int or double
+   * since num includes these.
+   * 
+   * casting is clearing what type do you use. it can make code standarized and readable
+   * 
+   */
+
+  num trueDbl = 4.9;
+  num trueInt = 4;
+
+  final castToDouble = trueDbl as double;
+  final castToInt = trueInt as int;
+
+  print(castToInt);
 }

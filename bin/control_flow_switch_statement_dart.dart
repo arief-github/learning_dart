@@ -1,3 +1,10 @@
+enum Weather {
+  sunny,
+  snowy,
+  cloudy,
+  rainy,
+}
+
 void main() {
   const int number = 3;
 
@@ -36,5 +43,21 @@ void main() {
       break;
     default:
       print("I'm not familiar with that weather");
+  }
+
+  // Switching to enums
+  const weatherToday = Weather.cloudy;
+
+  switch (weatherToday) {
+    case Weather.sunny:
+      print('Put on sunscreen');
+      break;
+    case Weather.snowy:
+      print('Get your skies');
+      break;
+    case Weather.cloudy:
+    case Weather.rainy:
+      print('Bring an umbrella');
+      break;
   }
 }
